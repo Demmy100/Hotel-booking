@@ -1,0 +1,102 @@
+.fNav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+
+.fNavItems {
+    display: flex;
+    gap: 20px;
+    margin: 20px 100px;
+    
+}
+
+.fNavItem {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.fNavItemContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.fNavItemContainer>h2 {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #15192E;
+    letter-spacing: 2px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.fNavItemContainer>h2:hover {
+    color: #C69F33;
+    transition: all 0.2s ease-in-out;
+}
+
+.fNavIcon {
+    font-size: 14px;
+    color: #15192E;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.fNavIcon:hover {
+    color: #C69F33;
+    transition: all 0.2s ease-in-out;
+}
+
+.fNavDropDown {
+    list-style: none;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 10px 23px 5px rgba(0,0,0,0.1);
+    margin-top: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: max-content;
+}
+
+.fNavList {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #15192E;
+    font-weight: 500;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.fNavButton {
+    display: flex;
+    gap: 30px;
+    margin-right: 80px;
+}
+
+.fNavButton>button {
+    border: none;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #C69F33;
+    cursor: pointer;
+}
+
+.fNavIcons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.fNavI:hover {
+    color: #C69F33;
+    transition: all .2s ease-out;
+}
