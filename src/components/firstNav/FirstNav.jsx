@@ -50,6 +50,7 @@ const FirstNav = () => {
     const [close, setClose] = useState(false)
     const [exit, setExit] = useState(false)
     const [show, setShow] = useState(false)
+    const [mobile, setMobile] = useState(false)
     const handleClick1 = () => {
             setHide(!hide);
         
@@ -66,9 +67,13 @@ const FirstNav = () => {
             setShow(!show)
         
     }
+    const handleMobile = () => {
+      setMobile(!mobile)
+    }
   return (
     <div className='fNav'>
-        <div className="fNavItems">
+   <div className="fNavContent">
+   <div className="fNavItems">
              <div className="fNavItem">
                 <div className="fNavItemContainer">
                 <h2>eko gardens</h2>
@@ -139,6 +144,29 @@ const FirstNav = () => {
         <FaPinterest fontSize="14px" cursor="pointer" className='fNavI'/>
         </div>
         </div>
+   </div>
+   {/*mobile */}
+{   <div className="fNavMobileContainer">
+  <div className="fNavMobileItem">
+                <div className="fNavItemContainer">
+                <h2>our hotels</h2>
+                <FontAwesomeIcon icon={faAngleDown}className="fNavMobileIcon" onClick={handleMobile}/>
+                </div>
+                {mobile &&
+                    <ul className="fNavMobileDropDown">
+                    <li className="fNavMobileList">eko hotel</li>
+                    <li className="fNavMobileList">eko suites</li>
+                    <li className="fNavMobileList">eko signature</li>
+                    <li className="fNavMobileList">eko gardens</li>
+                    <li className="fNavMobileList">eko tower ii</li>
+                </ul>
+                }
+            </div>
+            <div className="fNavMobileBtn">
+            <button>special offers</button>
+            </div>
+</div> 
+}
     </div>
   )
 }

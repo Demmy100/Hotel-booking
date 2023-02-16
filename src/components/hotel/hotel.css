@@ -1,0 +1,148 @@
+.hotel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding: 30px 100px;
+}
+
+
+.hotel>h1 {
+    margin-top: 40px;
+}
+
+.hotel>h1>span {
+    color: #C69F33;
+}
+
+.hotelCarousel {
+    margin-top: 50px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 20px;
+    /* display: flex;
+    gap: 20px;
+    width: max-content; */
+}
+
+.hotelWrapper {
+    position: relative;
+}
+
+.hotelImg {
+    width: 100%;
+    object-fit: cover;
+}
+
+.hotelTexts {
+    position: absolute;
+    top: 250px;
+    /* left: 10px; */
+    padding: 20px;
+}
+
+.hotelTexts>h2 {
+    color: white;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 1px solid #C69F33;
+}
+
+.hotelText>p {
+    font-weight: 500;
+    color: white;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+
+.hotelText>span {
+    color: #C69F33;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.hotelButton {
+    padding: 15px;
+    cursor: pointer;
+    background-color: #C69F33;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: none;
+    margin: 40px 0;
+}
+
+.hotelButton:hover {
+    transition: .1s all ease-in-out;
+    color: black;
+    background-color: white;
+    border: 1px solid #000;
+}
+
+/* .hoteLine {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 40px 0;
+    position: relative;
+}
+
+ .hLine1 {
+    content: "";
+    position: absolute;
+    bottom: -390px;
+    width: 250px;
+    height: 1px;
+    background-color: #C69F33;
+}
+
+
+.hLine2 {
+    content: "";
+    position: absolute;
+    bottom: -395px;
+    left: 620px;
+    width: 250px;
+    height: 0.5px;
+    background-color: #C69F33;
+}
+
+.hLine3 {
+    content: "";
+    position: absolute;
+    bottom: -400px;
+    width: 50px;
+    height: 1px;
+    background-color: #C69F33;
+} */
+
+@media screen and (max-width: 900px) {
+    .hotel {
+        padding: 30px;
+    }
+    .hotelCarousel {
+        grid-template-columns: 1fr;
+    }
+    .hotelTexts {
+        top: 150px;
+    }
+    .hotel>h1 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hotelTexts {
+        top: 50px;
+    }
+    .hotelText>p {
+        font-size: 14px;
+    }
+}

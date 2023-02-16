@@ -4,11 +4,13 @@ import './mainNav.css'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
+import {AiOutlineMenu} from 'react-icons/ai'
 const MainNav = () => {
   const [isActive, setIsActive] = useState(false)
   const [open, setOpen] = useState(false)
   const [show, setShow] = useState(false)
   const [exit, setExit] = useState(false)
+  const [mainMobile, setMainMobile] = useState(false)
 
   const handleOpen1 = () => {
     setIsActive(!isActive)
@@ -21,6 +23,9 @@ const MainNav = () => {
   }
   const handleOpen4 = () => {
     setExit(!exit)
+  }
+  const handleMain = () => {
+    setMainMobile(!mainMobile)
   }
   return (
     <div className='mainNav'>
@@ -121,7 +126,27 @@ const MainNav = () => {
           </div> */}
         </div>
       </div>
-      
+      {/*mobile */}
+      <div className="mainNavMobile">
+        <div className="mainNavMobileLogo">
+          <img src={EkoHotel} alt="" className="mainNavImg" />
+        </div>
+        <div className="mainNavMobileMenu">
+          <AiOutlineMenu fontSize="25px" cursor="pointer" onClick={handleMain}/>
+          {mainMobile && 
+            <ul className="mainNavMobileItem">
+            <li className="mainNavMobileList">HOME</li>
+            <li className="mainNavMobileList">DINING</li>
+            <li className="mainNavMobileList">MEETINGS & EVENTS</li>
+            <li className="mainNavMobileList">RECREATIONAL SERVICES</li>
+            <li className="mainNavMobileList">BLOG</li>
+            <li className="mainNavMobileList">GALLERY</li>
+            <li className="mainNavMobileList">ABOUT US</li>
+            <li className="mainNavMobileList">CONTACT US</li>
+          </ul>
+          }
+        </div>
+      </div>
     </div>
   )
 }

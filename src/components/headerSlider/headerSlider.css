@@ -4,12 +4,15 @@
 
 .hSlider{
     position: relative;
+    z-index: -1;
     /* display: flex; */
 }
 
 .hSliderWrapper>img {
     width: 100%;
     object-fit: cover;
+   
+/*     overflow: hidden; */
 }
 
 .hSliderIcon1 {
@@ -18,7 +21,7 @@
     left: 20px;
     color: white;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .hSliderIcon2 {
@@ -28,5 +31,12 @@
     right: 0;
     color: white;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .hSliderIcon1 {
+        position: absolute;
+        left: 0;
+    }
 }

@@ -36,16 +36,47 @@
     font-size: 20px;
 }
 
+.cItems1 {
+    position: relative;
+}
+
+.cItems2 {
+    position: relative;
+}
+
+.date1 {
+    position: absolute;
+    top: -360px;
+    right: 50px;
+    max-width: 350px;
+}
+
+.date2 {
+    position: absolute;
+    top: -360px;
+    left: 0px;
+    max-width: 350px;
+}
+
 .cItemItem {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.cItem {
+/* .cItem {
     display: flex;
     align-items: center;
     gap: 10px;
+} */
+
+.cItem {
+    border: none;
+    background-color: hsl(194, 44%, 15%);
+    color: white;
+    outline: none;
+    text-transform: uppercase;
+    font-size: 16px;
 }
 
 .cItem>span {
@@ -70,7 +101,7 @@
 .cList {
     text-transform: uppercase;
     font-size: 14px;
-    color: #15192E;
+    color: white;
     font-weight: 500;
     margin-bottom: 20px;
     cursor: pointer;
@@ -90,4 +121,24 @@
 .cButton>button:hover {
     color: #15192E;
     transition: all .2 ease-in;
+}
+
+@media screen and (max-width: 900px) {
+    .cContainer {
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 30px;
+    }
+    .cWrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .cItems {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .date1 {
+        right: -80px;
+    }
 }

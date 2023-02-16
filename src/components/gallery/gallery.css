@@ -1,0 +1,39 @@
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.gallery>h1 {
+    margin-bottom: 20px;
+}
+
+.gallery>h1>span {
+    color: #C69F33;
+}
+
+.galleryWrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.galleryImg {
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.galleryImg:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 900px) {
+    .galleryWrapper {
+        flex-direction: column;
+    }
+    .gallery>h1 {
+        font-size: 20px;
+    }
+}

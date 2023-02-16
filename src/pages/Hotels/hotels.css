@@ -1,0 +1,114 @@
+.hotelsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hotelsWrapper {
+    background-image: url(../../images/hotel-eko-signature2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+    padding: 100px 100px 200px 100px;
+    /* background-color: red; */
+}
+
+.hotelsWrapper>h1 {
+    color: white;
+    font-weight: 500;
+    font-size: 50px;
+}
+
+.hotelsWrapper>span {
+    color: #B39759;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.hotelsWrapper>span>small {
+    color: white;
+    cursor: none;
+}
+
+.hotelsInfoWrapper {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    gap: 50px;
+}
+
+.hotelsInfo {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+
+
+.hotelsImg {
+    width: 100%;
+    object-fit: cover;
+    /* height: 90%; */
+}
+
+.hotelsInfoImgWrapper {
+    flex: 1;
+    width: 100%;
+}
+
+.hotelsInfoTexts {
+    flex: 0.5;
+    padding: 30px 20px;
+    border: 1px solid #B39759;
+    
+}
+
+.hotelsInfoTexts>h2 {
+    color: #15192E;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 15px 0;
+}
+
+.hotelsInfoTexts>p {
+    text-transform: capitalize;
+    line-height: 25px;
+    color: #000;
+    font-weight: 300;
+}
+
+.hotelsInfoTexts>button {
+    padding: 15px;
+    cursor: pointer;
+    background-color: #B39759;
+    color: white;
+    font-weight: 500;
+    border: none;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.hotelsInfoTexts>button:hover {
+    transition: .1s all ease-in-out;
+    color: black;
+    background-color: white;
+    border: 1px solid #000;
+}
+
+@media screen and (max-width: 900px) {
+    .hotelsWrapper {
+        padding: 30px 30px 50px 30px;
+    }
+    .hotelsInfoWrapper {
+        padding: 30px;
+    }
+    .hotelsInfo {
+        flex-direction: column;
+    }
+}

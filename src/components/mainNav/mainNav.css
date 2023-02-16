@@ -1,13 +1,20 @@
 .mainNav {
     width: 100%;
+ /*    position: sticky;  */
+}
+
+.mainNavContainer {
+    position: sticky;
+    padding: 0 100px;
 }
 
 .mainNavItems {
     display: flex;
     justify-content: space-between;
-    margin: 0 100px;
+    /* padding: 0 100px; */
     align-items: center;
-    position: sticky;
+    z-index: -1;
+   
 }
 
 .mainNavItem {
@@ -34,6 +41,7 @@
     display: flex;
     gap: 20px;
     align-items: center;
+    /* z-index: -1; */
 }
 
 .mainNavWrapper>h2 {
@@ -73,7 +81,7 @@
     position: absolute;
     top: 20px;
     right: 0;
-    z-index: 2;
+    z-index: 1;
    /*  display: none; */
 }
 
@@ -99,5 +107,52 @@
 .mainNavImg {
     width: 80%;
     object-fit: cover;
+}
+
+.mainNavMobile {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .mainNavContainer {
+        display: none;
+        
+    }
+    .mainNavMobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 30px;
+        /* position: relative; */
+    }
+   /*  .mainNavMobileItem {
+        position: relative;
+    } */
+    .mainNavMobileItem {
+        width: 100%;
+        height: 40vh;
+        padding: 0 30px;
+        position: absolute;
+        top: 160px;
+        left: 0;
+        z-index: 2;
+        background-color: white;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .mainNavMobileList {
+        text-transform: uppercase;
+        font-size: 14px;
+        color: #15192E;
+        font-weight: 500;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    .mainNavMobileList:hover {
+        color: #C69F33;
+    transition: all 0.2s ease-in-out;
+    }
 }
 
