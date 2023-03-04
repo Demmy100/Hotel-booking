@@ -7,7 +7,7 @@ import ekoSuites from '../../images/eko-suites.jpg'
 import ekoSignature2 from '../../images/hotel-eko-signature2.jpg'
 import ekoGardens from '../../images/eko-gardens.jpg'
 import './hotels.css'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 const hotelsInfo = [
   {
     id: 1,
@@ -51,7 +51,7 @@ const Hotels = () => {
       <div className="hotelsContainer">
       <div className="hotelsWrapper">
       <h1>Our Hotels</h1>
-      <span>Home <small>/ Our Hotels</small></span> 
+      <Link to="/" className='link'><span>Home <small>/ Our Hotels</small></span> </Link>
       </div>
       <div className="hotelsInfoWrapper">
         {hotelsInfo.map((info) => (
@@ -62,7 +62,7 @@ const Hotels = () => {
             <div className="hotelsInfoTexts">
               <h2>{info.title}</h2>
               <p>{info.desc}</p>
-              <button onClick={handleClick}>{info.button}</button>
+              <div><button onClick={handleClick}>{info.button}</button></div>
             </div>
           </div>
         ))}
